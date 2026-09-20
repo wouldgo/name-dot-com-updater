@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/namedotcom/go/namecom"
+	namecom "github.com/namedotcom/go/v4/namecom"
 )
 
 func main() {

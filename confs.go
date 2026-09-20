@@ -3,7 +3,7 @@ package main
 import (
 	"strings"
 
-	"github.com/namedotcom/go/namecom"
+	namecom "github.com/namedotcom/go/v4/namecom"
 )
 
 type EnvironmentConf struct {
