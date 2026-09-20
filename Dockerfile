@@ -1,4 +1,4 @@
-FROM golang:1.16-alpine AS build_deps
+FROM golang:1.27-alpine AS build_deps
 
 RUN apk add --no-cache git
 
@@ -13,9 +13,9 @@ FROM build_deps AS build
 
 COPY . .
 
-RUN CGO_ENABLED=0 go build -o name-me -ldflags '-w -extldflags "-static"' .
+RUN CGO_ENABLED=0 go build -o name-me -ldflags '-w -extldflags "-static"' ./cmd/...
 
-FROM alpine:3.9
+FROM alpine:3.24.2
 
 RUN apk add --no-cache ca-certificates
 
